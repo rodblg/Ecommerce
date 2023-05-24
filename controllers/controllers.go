@@ -44,6 +44,16 @@ func VerifyPassword(userPassword string, givenPassword string) (bool, string) {
 
 }
 
+// Signup godoc
+//
+// 	@Summary 		Store a new user
+// 	@Description	Takes a user JSON and store in Mongo collection. Return saved JSON.
+// 	@Tags			users
+// 	@Accept 		json
+// 	@Produce        json
+// 	@Success        201   {object}  models.User
+// 	@Router			/users/signup  [post]
+
 func Signup() gin.HandlerFunc {
 
 	return func(c *gin.Context) {
